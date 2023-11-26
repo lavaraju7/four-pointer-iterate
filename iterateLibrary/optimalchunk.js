@@ -5,7 +5,6 @@ const optimalChunk = (array) => {
     let final_length = 500;
     let chunks = 0;
     const finalArray = [];
-    console.log(array.length);
     if (total_array_length <= 100) {
       chunks = 2;
     } else if (total_array_length > 100 && total_array_length <= 500) {
