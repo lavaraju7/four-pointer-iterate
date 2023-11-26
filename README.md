@@ -14,25 +14,25 @@ npm i --save four-pointer-iterate
 
 ## Usage
 
-const four = require("four-pointer-iterate");
+const four = require("four-pointer-iterate")\
 
-const arr = [1,2,3,6,99,878]
+const arr = [1,2,3,6,99,878]\
 
-const ele = 6
+const ele = 6\
 
-const res = iter.filterArray(arr,ele);
+const res = iter.filterArray(arr,ele)\
 
 ## Methods
 
 Well we know this isn't much but it is faster. Give us some time you may find some methods you are looking for soon enough (🤞🤞).
 
-filterArray
+filterArray\
 
-filterArrayIndex
+filterArrayIndex\
 
-filterArrayWithProperty
+filterArrayWithProperty\
 
-includes
+includes\
 
 optimalchunk
 
