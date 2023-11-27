@@ -1,4 +1,4 @@
-const filterArrayIndex = (array, predicate) => {
+const pluck = (array, key) => {
   try {
     const array_length = array.length;
     let start = 0;
@@ -9,8 +9,8 @@ const filterArrayIndex = (array, predicate) => {
     if (array_length === 0) {
       return [];
     } else if (array_length === 1) {
-      if (array[start] === predicate) {
-        return [0];
+      if (array[start][key]) {
+        return [array[start][key]];
       } else {
         return [];
       }
@@ -23,17 +23,17 @@ const filterArrayIndex = (array, predicate) => {
       mid1 = mid;
     }
     for (let i = 0; i < array_length - 1; i++) {
-      if (array[start] === predicate) {
-        returnList.push(start);
+      if (array[start][key]) {
+        returnList.push(array[start][key]);
       }
-      if (array[mid] === predicate && start !== mid) {
-        returnList.push(mid);
+      if (array[mid][key] && start !== mid) {
+        returnList.push(array[mid][key]);
       }
-      if (array[mid1] === predicate && mid !== mid1) {
-        returnList.push(mid1);
+      if (array[mid1][key] && mid !== mid1) {
+        returnList.push(array[mid1][key]);
       }
-      if (array[end] === predicate && mid1 !== end) {
-        returnList.push(end);
+      if (array[end][key] && mid1 !== end) {
+        returnList.push(array[end][key]);
       }
       start = start + 1;
       end = end - 1;
@@ -49,4 +49,4 @@ const filterArrayIndex = (array, predicate) => {
   }
 };
 
-module.exports = filterArrayIndex;
+module.exports = pluck;

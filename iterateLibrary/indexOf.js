@@ -1,4 +1,4 @@
-const filterArrayIndex = (array, predicate) => {
+const indexOf = (array, predicate) => {
   try {
     const array_length = array.length;
     let start = 0;
@@ -24,7 +24,7 @@ const filterArrayIndex = (array, predicate) => {
     }
     for (let i = 0; i < array_length - 1; i++) {
       if (array[start] === predicate) {
-        returnList.push(start);
+        return start;
       }
       if (array[mid] === predicate && start !== mid) {
         returnList.push(mid);
@@ -40,7 +40,7 @@ const filterArrayIndex = (array, predicate) => {
       mid = mid - 1;
       mid1 = mid1 + 1;
       if (start > mid || mid1 > end) {
-        return returnList;
+        return returnList.sort()[0];
       }
     }
   } catch (err) {
@@ -49,4 +49,4 @@ const filterArrayIndex = (array, predicate) => {
   }
 };
 
-module.exports = filterArrayIndex;
+module.exports = indexOf;
