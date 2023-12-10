@@ -1,6 +1,6 @@
 {
   "name": "four-pointer-iterate",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "An iteration library using four pointer method for fast results",
   "main": "index.js",
   "scripts": {
