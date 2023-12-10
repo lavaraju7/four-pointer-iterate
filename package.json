@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/lavaraju7/four-pointer-method/issues"
   },
-  "homepage": "https://github.com/lavaraju7/four-pointer-method#readme"
+  "homepage": "https://github.com/lavaraju7/four-pointer-method#readme",
+  "dependencies": {
+    "four-pointer-iterate": "^1.0.5",
+    "underscore": "^1.13.6"
+  }
 }
